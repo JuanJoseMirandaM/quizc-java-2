@@ -73,4 +73,14 @@ public class Question {
             return question;
         }
     }
+
+    @Override
+    public String toString() {
+        return "\n\t\t" + "Question{" +
+                "title='" + title + '\'' +
+                ", questionType=" + questionType +
+                ", validations=" + validations +
+                ", additionalData=" + additionalData +
+                '}';
+    }
 }

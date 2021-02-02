@@ -1,0 +1,1 @@
+{"title":"Prueba","questions":[{"title":"Nombre","questionType":"TEXT","validations":["REQUIRED"],"additionalData":[]},{"title":"Edad","questionType":"NUMERIC","validations":["MIN"],"additionalData":[]}]}

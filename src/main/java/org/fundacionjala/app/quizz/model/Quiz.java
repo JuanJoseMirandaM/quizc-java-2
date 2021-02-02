@@ -23,4 +23,12 @@ public class Quiz {
     public List<Question> getQuestions() {
         return questions;
     }
+
+    @Override
+    public String toString() {
+        return "Quiz{" + "\n" +
+                "\t title='" + title + '\'' + ",\n" +
+                "\t questions=" + questions + " \n" +
+                '}';
+    }
 }
