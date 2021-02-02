@@ -1,5 +1,6 @@
 package org.fundacionjala.app.quizz;
 
+import org.fundacionjala.app.Json;
 import org.fundacionjala.app.quizz.console.QuizUIHandler;
 import org.fundacionjala.app.quizz.model.Quiz;
 import org.fundacionjala.app.quizz.model.QuizAnswers;
@@ -30,6 +31,9 @@ public class Menu {
                 showQuiz();
                 break;
             case '4':
+                loadQuiz();
+                break;
+            case '5':
                 shouldExit = true;
                 break;
             default:
@@ -59,13 +63,18 @@ public class Menu {
         quizAnswers = QuizUIHandler.fillQuiz(quiz);
     }
 
+    private void loadQuiz(){
+        quiz = Json.readJsonFile();
+    }
+
     private void showMainMenu() {
         System.out.println("Quizc - A command quiz utility");
         System.out.println("======================================");
         System.out.println("1. Create quiz");
         System.out.println("2. Fill quiz");
         System.out.println("3. Show quiz");
-        System.out.println("4. Exit");
+        System.out.println("4. Load quiz");
+        System.out.println("5. Exit");
         System.out.println("======================================");
     }
 }

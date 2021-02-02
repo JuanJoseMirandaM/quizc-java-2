@@ -31,7 +31,7 @@ public class Json {
         System.out.println(parsedQuiz);
     }
 
-    private static Quiz readJsonFile() {
+    public static Quiz readJsonFile() {
         Gson gson = new Gson();
         Quiz quiz = null;
         try (JsonReader reader = new JsonReader(new FileReader("./myForm.json"))) {
